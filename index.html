@@ -14,7 +14,7 @@ if (/android/i.test(navigator.userAgent)) {
   device = "iPhone";
 }
 
-fetch("PASTE_YOUR_WEB_APP_URL_HERE", {
+fetch("https://script.google.com/macros/s/AKfycbzIwMabla0BEObvnla2KDYoMmS2YKwEBE5Snr4FFvIyUum6LGSTBdFQEBNPOLfh/exec", {
   method: "POST",
   body: JSON.stringify({
     device: device,
@@ -87,3 +87,4 @@ function check() {
 </body>
 
 </html>
+
