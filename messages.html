@@ -5,28 +5,6 @@
 <title>كل الرسائل 💌</title>
 
 <style>
-  <script>
-(function(){
-  let device = "Desktop";
-
-  if (/android/i.test(navigator.userAgent)) {
-    device = "Android";
-  } else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-    device = "iPhone / iPad";
-  }
-
-  // الرابط ده يكون Web App URL اللي نسخته من Google Apps Script
-  const webAppUrl = "https://script.google.com/macros/s/AKfycbycNY6SQyjPCPv-syExtTbZ4864V0ap_mGQiW0oDRoZfSoeHMGTkAdW_x5WDg028Mo/exec";
-
-  fetch(webAppUrl, {
-    method: "POST",
-    body: JSON.stringify({
-      device: device,
-      userAgent: navigator.userAgent
-    })
-  }).catch(err => console.log("Error sending data:", err));
-})();
-</script>
 body{
   text-align:center;
   font-family:Arial;
@@ -90,3 +68,4 @@ h1{
 </body>
 
 </html>
+
