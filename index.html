@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>مس مريم 🔒</title>
+
+<style>
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  font-family: Arial;
+  direction: rtl;
+}
+
+.box {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  width: 300px;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+  <h3>🔒 اكتب كلمة السر</h3>
+  <input type="password" id="pass" placeholder="كلمة السر">
+  <br>
+  <button onclick="check()">فتح</button>
+</div>
+
+<script>
+function check() {
+  let password = document.getElementById("pass").value;
+
+  // غير كلمة السر هنا
+  let correctPassword = "6/10/2024";
+
+  if (password === correctPassword) {
+    window.location.href = "messages.html";
+  } else {
+    alert("❌ كلمة السر غلط");
+  }
+}
+</script>
+
+</body>
+</html>
