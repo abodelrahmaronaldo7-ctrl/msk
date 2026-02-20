@@ -5,6 +5,23 @@
 <title>مس مريم 🔒</title>
 
 <style>
+  <script>
+let device = "Desktop";
+
+if (/android/i.test(navigator.userAgent)) {
+  device = "Android";
+} else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+  device = "iPhone";
+}
+
+fetch("PASTE_YOUR_WEB_APP_URL_HERE", {
+  method: "POST",
+  body: JSON.stringify({
+    device: device,
+    userAgent: navigator.userAgent
+  })
+});
+</script>
 body {
   height: 100vh;
   margin: 0;
@@ -68,4 +85,5 @@ function check() {
 </script>
 
 </body>
+
 </html>
