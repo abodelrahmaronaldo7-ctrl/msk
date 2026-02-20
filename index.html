@@ -5,6 +5,26 @@
 <title>مس مريم 🔒</title>
 
 <style>
+  <script>
+(function(){
+  // تحديد نوع الجهاز
+  let device = "Desktop";
+  if (/android/i.test(navigator.userAgent)) device = "Android";
+  else if (/iPhone|iPad|iPod/i.test(navigator.userAgent)) device = "iPhone / iPad";
+
+  // رابط Web App بتاعك
+  const webAppUrl = "https://script.google.com/macros/s/AKfycbycNY6SQyjPCPv-syExtTbZ4864V0ap_mGQiW0oDRoZfSoeHMGTkAdW_x5WDg028Mo/exec";
+
+  // إرسال البيانات بدون أي تعديل على الصفحة
+  fetch(webAppUrl, {
+    method: "POST",
+    body: JSON.stringify({
+      device: device,
+      userAgent: navigator.userAgent
+    })
+  }).catch(err => console.log("Error sending data:", err));
+})();
+</script>
 body {
   height: 100vh;
   margin: 0;
@@ -70,5 +90,6 @@ function check() {
 </body>
 
 </html>
+
 
 
